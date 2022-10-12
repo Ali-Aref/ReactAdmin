@@ -1,11 +1,12 @@
 import { Box } from "@chakra-ui/react";
-import { pages as p } from "./pages/index"
+import { Core } from "./core-ui/Core"
 
 
 function App() {
   return (
     <Box bg="gray.50">
-      <p.Dashboard />
+      <Core />
+      other secions
     </Box>
   );
 }

@@ -1,6 +1,11 @@
-import AdminTempo from "./AdminTempo"
+import { Box } from "@chakra-ui/react"
+import Navbar from "./navbar/Navbar"
 
 
-export {
-  AdminTempo,
+const Core = ({}) =>{
+  return <Box>
+    <Navbar />
+  </Box>
 }
+
+export { Core }
