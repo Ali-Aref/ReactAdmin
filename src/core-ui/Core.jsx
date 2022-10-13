@@ -1,11 +1,12 @@
-import { Box } from "@chakra-ui/react"
-import Navbar from "./navbar/Navbar"
+import { Box, Flex } from "@chakra-ui/react"
+import Sidebar from './sidebar/Sidebar'
 
 
-const Core = ({}) =>{
-  return <Box>
-    <Navbar />
-  </Box>
+const Core = ({ content }) =>{
+  return <Flex>
+    <Sidebar />
+    {content}
+  </Flex>
 }
 
 export { Core }
