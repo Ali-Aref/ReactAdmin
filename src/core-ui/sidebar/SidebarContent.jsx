@@ -8,7 +8,8 @@ import {
   VStack,
   IconButton,
 } from "@chakra-ui/react";
-import { FiAnchor, FiCommand, FiDatabase, FiEye, FiMap } from "react-icons/fi";
+import { BsGrid1X2 } from 'react-icons/bs'
+import { FiAnchor, FiCommand, FiDatabase, FiEye, FiMap, FiMenu } from "react-icons/fi";
 import { useState } from "react";
 
 const SidebarContent = ({ content, collapse }) => {
@@ -27,7 +28,7 @@ const SidebarContent = ({ content, collapse }) => {
   return (
     <Flex p="1rem" bg="" flexDir="column" alignContent="start">
       <IconButton
-        icon={<FiAnchor />}
+        icon={<FiMenu />}
         mb="1rem"
         bg="none"
         _hove={{ background: "none" }}
@@ -45,7 +46,7 @@ export default SidebarContent;
 export const ContentMenu = ({ isCollapsed }) => {
   return (
     <VStack bg="">
-      <SidebarItem icon={<FiCommand />} text="Dashboard" />
+      <SidebarItem icon={<BsGrid1X2 />} text="Dashboard" />
       <SidebarItem icon={<FiMap />} text="Maps" />
     </VStack>
   );

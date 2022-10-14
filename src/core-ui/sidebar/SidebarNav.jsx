@@ -11,12 +11,22 @@ import {
   FiMoon,
   FiAnchor,
   FiChevronDown,
+  FiGrid,
+  FiChevronRight,
+  FiColumns,
+  FiCircle,
+  FiDisc,
+  FiArrowRightCircle,
+  FiArrowLeftCircle,
+  FiChevronsRight,
+  FiChevronLeft,
+  FiChevronsLeft,
 } from "react-icons/fi";
-import { TbArrowWaveRightDown } from 'react-icons/tb'
-import { Flex, IconButton, VStack } from "@chakra-ui/react";
+import { RiLayoutColumnFill, RiLayoutColumnLine } from "react-icons/ri";
+import { Flex, IconButton, Switch, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 
-const SidebarNav = ({}) => {
+const SidebarNav = ({ collapse }) => {
   return (
     <Flex
       direction={"column"}
@@ -29,7 +39,11 @@ const SidebarNav = ({}) => {
       px="10px"
     >
       <VStack>
-        <IconButton icon={<FiMenu />} />
+        <IconButton
+          icon={collapse.get ? <FiChevronsRight /> : <FiChevronsLeft />}
+          onClick={() => collapse.set(!collapse.get)}
+        />
+        <IconButton icon={<FiGrid />}  />
         <IconButton icon={<FiMail />} />
         <IconButton icon={<FiMessageCircle />} />
         <IconButton icon={<FiBell />} />
